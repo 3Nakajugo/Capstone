@@ -13,7 +13,7 @@ class Movie(db.Model):
     __tablename__ = 'Movie'
 
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String)
+    title = db.Column(db.String, nullable=False)
     description = db.Column(db.String)
     category = db.Column(db.String(120))
 
@@ -51,7 +51,7 @@ class Actor(db.Model):
     __tablename__ = 'Actor'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
+    name = db.Column(db.String, nullable=False)
     gender = db.Column(db.String)
     age = db.Column(db.String)
 
