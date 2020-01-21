@@ -165,7 +165,7 @@ def delete_actor(id):
     }), 201
 
 
-@app.route('/actor/<int:id>', methods=['PATCH'])
+@app.route('/actors/<int:id>', methods=['PATCH'])
 def update_actor(id):
     """
         Updates an actor
@@ -176,9 +176,9 @@ def update_actor(id):
     if not actor:
         abort(404)
 
-    actor.name = request_data.get("name", movie.name)
-    actor.age = request_data.get("age", movie.age)
-    actor.gender = request_data.get("gender", movie.gender)
+    actor.name = request_data.get("name", actor.name)
+    actor.age = request_data.get("age", actor.age)
+    actor.gender = request_data.get("gender", actor.gender)
     db.session.commit()
 
     return jsonify({
