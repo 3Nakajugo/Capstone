@@ -4,6 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from models import db, Movie, Actor
 
+from auth import AuthError, requires_auth
+
 app = Flask(__name__)
 app.config.from_object('config')
 migrate = Migrate(app, db)
@@ -19,7 +21,8 @@ db.init_app(app)
 #  ----------------------------------------------------------------
 
 @app.route('/movies')
-def get_movies():
+@requires_auth('get:movies')
+def get_movies(payload):
     """
         Gets all Movies
     """
@@ -33,7 +36,8 @@ def get_movies():
 
 
 @app.route('/movies/create', methods=['POST'])
-def create_movies():
+@requires_auth('post:movies')
+def create_movies(payload):
     """
     Creates a new movie
     """
@@ -61,6 +65,7 @@ def create_movies():
 
 
 @app.route('/movies/<int:id>', methods=['DELETE'])
+@requires_auth('delete:movies')
 def delete_movie(id):
     """
         Deletes a movie by ID
@@ -81,6 +86,7 @@ def delete_movie(id):
 
 
 @app.route('/movies/<int:id>', methods=['PATCH'])
+@requires_auth('patch:movies')
 def update_movie(id):
     """
         Updates movie title
@@ -104,7 +110,8 @@ def update_movie(id):
 #  ----------------------------------------------------------------
 
 @app.route('/actors')
-def get_actors():
+@requires_auth('get:actors')
+def get_actors(payload):
     """
         Gets all actors
     """
@@ -118,7 +125,8 @@ def get_actors():
 
 
 @app.route('/actors/create', methods=['POST'])
-def create_actor():
+@requires_auth('post:actors')
+def create_actor(payload):
     """
     Creates a new actor
     """
@@ -146,7 +154,8 @@ def create_actor():
 
 
 @app.route('/actors/<int:id>', methods=['DELETE'])
-def delete_actor(id):
+@requires_auth('delete:actors')
+def delete_actor(id, payload):
     """
         Deletes a actor by ID
     """
@@ -166,7 +175,8 @@ def delete_actor(id):
 
 
 @app.route('/actors/<int:id>', methods=['PATCH'])
-def update_actor(id):
+@requires_auth('patch:actors')
+def update_actor(id, payload):
     """
         Updates an actor
     """
@@ -201,12 +211,12 @@ def not_found(error):
     }), 404
 
 
-@app.errorhandler(401)
+@app.errorhandler(AuthError)
 def permission_error(error):
     return jsonify({
         "success": False,
         "error": 401,
-        "message": "Authentication error"
+        "message": error.__dict__
     }), 401
 
 
