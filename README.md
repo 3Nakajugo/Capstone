@@ -4,6 +4,10 @@
 
 Capstone is a casting agency site that helps in creating movies and managing and assigning actors to those movies.
 
+### heroku Link
+
+https://casting-agency-api.herokuapp.com/
+
 ### Tech Stack
 
 Our tech stack will include:
@@ -61,7 +65,7 @@ To start and run the local development server,
   $ python3 app.py
   ```
 
-4. Navigate to Home page [http://localhost:5000](http://localhost:5000)
+4. Navigate to Home page 
 
 ### Endpoints
 
@@ -69,9 +73,9 @@ To start and run the local development server,
 | ------  | ------      |------      |------  |------   |
 |GET /actors| Fetches actors | None | None | list of drinks |
 |GET /movies| Fetches drinks |get:drinks-detial | None | list of drinks |
-|POST /actors| Creates new actor |post:actors | `{}` | list of actors |
-|POST /movies| Creates new movie |post:movies | `{}` | list of movies |
-|PATCH /actors/<int:id>| Updates an actor |patch:actors | `{}` | list of actors |
-|PATCH /movies/<int:id>| Updates a movie |patch:movies | `{}` | list of movies |
-|DELETE /actors/<int:id>| deletes an actor |delete:actors |None | id of deleted actor |
-|DELETE /movies/<int:id>| deletes a movie |delete:movies |None | id of deleted movie |
+|POST /actors| Creates new actor |post:actors | `{"name": "Maria","age": 25,"gender": "female"}` |actor |
+|POST /movies| Creates new movie |post:movies | `{"category": "comedy","description": "an old","title":"GAME NIGHT"}` | movie |
+|PATCH /actors/<int:id>| Updates an actor |patch:actors | `{"name": "Maria","age": 25,"gender": "female"}` | actor |
+|PATCH /movies/<int:id>| Updates a movie |patch:movies | `{"title":"GAME NIGHT"}` | movie |
+|DELETE /actors/<int:id>| deletes an actor |delete:actors |None | name of deleted actor |
+|DELETE /movies/<int:id>| deletes a movie |delete:movies |None | title of deleted movie |

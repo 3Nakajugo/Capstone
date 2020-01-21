@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "7c782747-d40e-41ef-835b-849429a89051",
+		"name": "capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "executive producer",
+			"item": [
+				{
+					"name": "get all movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMjEyNTM1Mjc0NzUyMTY4Mjg3MyIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIxODk1LCJleHAiOjE1Nzk2MjkwOTUsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.w0UGK97NGEYOFAP86-aD7-9X3uAAVhRL7LmqxhVL-kLtNIynoYlHi_iiVnDjOgMRkwOZY-aE-apKJyTHgUleFi41GxsmeyoL3k55iWaRfVQf2mGIg6VlP8yuxqhjbcmmGY0VJ-S3NHNtoW6igf5t7yIIXoT9mRsUTQxDcDxjUMFKWr3etrElgVz2IwaJ8ELQLFrozM9KGcOsGspuEugOaDmJK3YyVuw8xHGOu6N5HS0F9PkDsIlgwFPUI1U13ZNLIVeAD-b3zZZQCxvdEmu_8f_VJHOUopxKr1mL5DPm54_JRbe3n8_ypoouYElQTT8dJMsaL06SzpO60HEoIpGKhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMjEyNTM1Mjc0NzUyMTY4Mjg3MyIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIxODk1LCJleHAiOjE1Nzk2MjkwOTUsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.w0UGK97NGEYOFAP86-aD7-9X3uAAVhRL7LmqxhVL-kLtNIynoYlHi_iiVnDjOgMRkwOZY-aE-apKJyTHgUleFi41GxsmeyoL3k55iWaRfVQf2mGIg6VlP8yuxqhjbcmmGY0VJ-S3NHNtoW6igf5t7yIIXoT9mRsUTQxDcDxjUMFKWr3etrElgVz2IwaJ8ELQLFrozM9KGcOsGspuEugOaDmJK3YyVuw8xHGOu6N5HS0F9PkDsIlgwFPUI1U13ZNLIVeAD-b3zZZQCxvdEmu_8f_VJHOUopxKr1mL5DPm54_JRbe3n8_ypoouYElQTT8dJMsaL06SzpO60HEoIpGKhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"category\": \"comedy/adventure\",\r\n      \"description\": \"an old games gains life\",\r\n      \"title\": \"GAME NIGHT\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/movies/create",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMjEyNTM1Mjc0NzUyMTY4Mjg3MyIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIxODk1LCJleHAiOjE1Nzk2MjkwOTUsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.w0UGK97NGEYOFAP86-aD7-9X3uAAVhRL7LmqxhVL-kLtNIynoYlHi_iiVnDjOgMRkwOZY-aE-apKJyTHgUleFi41GxsmeyoL3k55iWaRfVQf2mGIg6VlP8yuxqhjbcmmGY0VJ-S3NHNtoW6igf5t7yIIXoT9mRsUTQxDcDxjUMFKWr3etrElgVz2IwaJ8ELQLFrozM9KGcOsGspuEugOaDmJK3YyVuw8xHGOu6N5HS0F9PkDsIlgwFPUI1U13ZNLIVeAD-b3zZZQCxvdEmu_8f_VJHOUopxKr1mL5DPm54_JRbe3n8_ypoouYElQTT8dJMsaL06SzpO60HEoIpGKhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/movies/4",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMjEyNTM1Mjc0NzUyMTY4Mjg3MyIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIxODk1LCJleHAiOjE1Nzk2MjkwOTUsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.w0UGK97NGEYOFAP86-aD7-9X3uAAVhRL7LmqxhVL-kLtNIynoYlHi_iiVnDjOgMRkwOZY-aE-apKJyTHgUleFi41GxsmeyoL3k55iWaRfVQf2mGIg6VlP8yuxqhjbcmmGY0VJ-S3NHNtoW6igf5t7yIIXoT9mRsUTQxDcDxjUMFKWr3etrElgVz2IwaJ8ELQLFrozM9KGcOsGspuEugOaDmJK3YyVuw8xHGOu6N5HS0F9PkDsIlgwFPUI1U13ZNLIVeAD-b3zZZQCxvdEmu_8f_VJHOUopxKr1mL5DPm54_JRbe3n8_ypoouYElQTT8dJMsaL06SzpO60HEoIpGKhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"title\": \"GAME NIGHTs\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/movies/600",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"600"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all actors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMjEyNTM1Mjc0NzUyMTY4Mjg3MyIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIxODk1LCJleHAiOjE1Nzk2MjkwOTUsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.w0UGK97NGEYOFAP86-aD7-9X3uAAVhRL7LmqxhVL-kLtNIynoYlHi_iiVnDjOgMRkwOZY-aE-apKJyTHgUleFi41GxsmeyoL3k55iWaRfVQf2mGIg6VlP8yuxqhjbcmmGY0VJ-S3NHNtoW6igf5t7yIIXoT9mRsUTQxDcDxjUMFKWr3etrElgVz2IwaJ8ELQLFrozM9KGcOsGspuEugOaDmJK3YyVuw8xHGOu6N5HS0F9PkDsIlgwFPUI1U13ZNLIVeAD-b3zZZQCxvdEmu_8f_VJHOUopxKr1mL5DPm54_JRbe3n8_ypoouYElQTT8dJMsaL06SzpO60HEoIpGKhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMjEyNTM1Mjc0NzUyMTY4Mjg3MyIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIxODk1LCJleHAiOjE1Nzk2MjkwOTUsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.w0UGK97NGEYOFAP86-aD7-9X3uAAVhRL7LmqxhVL-kLtNIynoYlHi_iiVnDjOgMRkwOZY-aE-apKJyTHgUleFi41GxsmeyoL3k55iWaRfVQf2mGIg6VlP8yuxqhjbcmmGY0VJ-S3NHNtoW6igf5t7yIIXoT9mRsUTQxDcDxjUMFKWr3etrElgVz2IwaJ8ELQLFrozM9KGcOsGspuEugOaDmJK3YyVuw8xHGOu6N5HS0F9PkDsIlgwFPUI1U13ZNLIVeAD-b3zZZQCxvdEmu_8f_VJHOUopxKr1mL5DPm54_JRbe3n8_ypoouYElQTT8dJMsaL06SzpO60HEoIpGKhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"name\": \"Maria\",\r\n      \"age\": 25,\r\n      \"gender\": \"female\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/actors/create",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMjEyNTM1Mjc0NzUyMTY4Mjg3MyIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIxODk1LCJleHAiOjE1Nzk2MjkwOTUsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.w0UGK97NGEYOFAP86-aD7-9X3uAAVhRL7LmqxhVL-kLtNIynoYlHi_iiVnDjOgMRkwOZY-aE-apKJyTHgUleFi41GxsmeyoL3k55iWaRfVQf2mGIg6VlP8yuxqhjbcmmGY0VJ-S3NHNtoW6igf5t7yIIXoT9mRsUTQxDcDxjUMFKWr3etrElgVz2IwaJ8ELQLFrozM9KGcOsGspuEugOaDmJK3YyVuw8xHGOu6N5HS0F9PkDsIlgwFPUI1U13ZNLIVeAD-b3zZZQCxvdEmu_8f_VJHOUopxKr1mL5DPm54_JRbe3n8_ypoouYElQTT8dJMsaL06SzpO60HEoIpGKhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/actors/2",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch actor",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n      \"name\": \"Maria\",\r\n      \"age\": 25,\r\n      \"gender\": \"male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/actors/2",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "casting director",
+			"item": [
+				{
+					"name": "get all actors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNTA3MDY4MTYyOTQ2Mzg3NzY4NSIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIyMzIyLCJleHAiOjE1Nzk2Mjk1MjIsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6bW92aWVzIl19.3N9i5kG0qHeh8VrRM0SOUNg1o5Idz3MtttD6xhXpGj00lGJCkpv648DqPSKp4CbW5aFISOrMJpMz_DadGuBdNA2Mfg68roBUvZqDCAkcFbhc4YOCgvQ8R1kadsswyhFfhAcmWvbFBBEmSKvLIIxTcrqoFVx6LUnjrb0pmhexxoOzEn8-0g_99pY1CuPumY64BeO44h7GLaynTn9ZijpHok3xkt5Skn_I2LEGhyK62zF1iZM-UUDfKAP7Han1438z8pANPuk9fqHaKMT0dRIqZDwwFTj31bCuv1Gd34d9Wl2QW2bDh9z_WJYJGiitfurwfD7xtCq5BTc8YH_Z36VKnw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNTA3MDY4MTYyOTQ2Mzg3NzY4NSIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIyMzIyLCJleHAiOjE1Nzk2Mjk1MjIsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6bW92aWVzIl19.3N9i5kG0qHeh8VrRM0SOUNg1o5Idz3MtttD6xhXpGj00lGJCkpv648DqPSKp4CbW5aFISOrMJpMz_DadGuBdNA2Mfg68roBUvZqDCAkcFbhc4YOCgvQ8R1kadsswyhFfhAcmWvbFBBEmSKvLIIxTcrqoFVx6LUnjrb0pmhexxoOzEn8-0g_99pY1CuPumY64BeO44h7GLaynTn9ZijpHok3xkt5Skn_I2LEGhyK62zF1iZM-UUDfKAP7Han1438z8pANPuk9fqHaKMT0dRIqZDwwFTj31bCuv1Gd34d9Wl2QW2bDh9z_WJYJGiitfurwfD7xtCq5BTc8YH_Z36VKnw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNTA3MDY4MTYyOTQ2Mzg3NzY4NSIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIyMzIyLCJleHAiOjE1Nzk2Mjk1MjIsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6bW92aWVzIl19.3N9i5kG0qHeh8VrRM0SOUNg1o5Idz3MtttD6xhXpGj00lGJCkpv648DqPSKp4CbW5aFISOrMJpMz_DadGuBdNA2Mfg68roBUvZqDCAkcFbhc4YOCgvQ8R1kadsswyhFfhAcmWvbFBBEmSKvLIIxTcrqoFVx6LUnjrb0pmhexxoOzEn8-0g_99pY1CuPumY64BeO44h7GLaynTn9ZijpHok3xkt5Skn_I2LEGhyK62zF1iZM-UUDfKAP7Han1438z8pANPuk9fqHaKMT0dRIqZDwwFTj31bCuv1Gd34d9Wl2QW2bDh9z_WJYJGiitfurwfD7xtCq5BTc8YH_Z36VKnw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/actors/2",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNTA3MDY4MTYyOTQ2Mzg3NzY4NSIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIyMzIyLCJleHAiOjE1Nzk2Mjk1MjIsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6bW92aWVzIl19.3N9i5kG0qHeh8VrRM0SOUNg1o5Idz3MtttD6xhXpGj00lGJCkpv648DqPSKp4CbW5aFISOrMJpMz_DadGuBdNA2Mfg68roBUvZqDCAkcFbhc4YOCgvQ8R1kadsswyhFfhAcmWvbFBBEmSKvLIIxTcrqoFVx6LUnjrb0pmhexxoOzEn8-0g_99pY1CuPumY64BeO44h7GLaynTn9ZijpHok3xkt5Skn_I2LEGhyK62zF1iZM-UUDfKAP7Han1438z8pANPuk9fqHaKMT0dRIqZDwwFTj31bCuv1Gd34d9Wl2QW2bDh9z_WJYJGiitfurwfD7xtCq5BTc8YH_Z36VKnw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"name\": \"Maria\",\r\n      \"age\": 25,\r\n      \"gender\": \"female\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/actors/create",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNTA3MDY4MTYyOTQ2Mzg3NzY4NSIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIyMzIyLCJleHAiOjE1Nzk2Mjk1MjIsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6bW92aWVzIl19.3N9i5kG0qHeh8VrRM0SOUNg1o5Idz3MtttD6xhXpGj00lGJCkpv648DqPSKp4CbW5aFISOrMJpMz_DadGuBdNA2Mfg68roBUvZqDCAkcFbhc4YOCgvQ8R1kadsswyhFfhAcmWvbFBBEmSKvLIIxTcrqoFVx6LUnjrb0pmhexxoOzEn8-0g_99pY1CuPumY64BeO44h7GLaynTn9ZijpHok3xkt5Skn_I2LEGhyK62zF1iZM-UUDfKAP7Han1438z8pANPuk9fqHaKMT0dRIqZDwwFTj31bCuv1Gd34d9Wl2QW2bDh9z_WJYJGiitfurwfD7xtCq5BTc8YH_Z36VKnw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n      \"name\": \"Maria\",\r\n      \"age\": 25,\r\n      \"gender\": \"male\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/actors/2",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5rTkVNa0l4T1VNMU5UVkRSRE13UXpoRE4wVTJNMEZHUWpVM1FrVkZPRUpDTVRoR05qUTBPUSJ9.eyJpc3MiOiJodHRwczovL2NvZmZlZXNob29wLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNTA3MDY4MTYyOTQ2Mzg3NzY4NSIsImF1ZCI6WyJjb2ZmZWVzaG9wIiwiaHR0cHM6Ly9jb2ZmZWVzaG9vcC5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTc5NjIyMzIyLCJleHAiOjE1Nzk2Mjk1MjIsImF6cCI6IjJQNGFzRlREWEsyc0liRm9xZWhabXZqS0ZkckFqZ0JjIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6bW92aWVzIl19.3N9i5kG0qHeh8VrRM0SOUNg1o5Idz3MtttD6xhXpGj00lGJCkpv648DqPSKp4CbW5aFISOrMJpMz_DadGuBdNA2Mfg68roBUvZqDCAkcFbhc4YOCgvQ8R1kadsswyhFfhAcmWvbFBBEmSKvLIIxTcrqoFVx6LUnjrb0pmhexxoOzEn8-0g_99pY1CuPumY64BeO44h7GLaynTn9ZijpHok3xkt5Skn_I2LEGhyK62zF1iZM-UUDfKAP7Han1438z8pANPuk9fqHaKMT0dRIqZDwwFTj31bCuv1Gd34d9Wl2QW2bDh9z_WJYJGiitfurwfD7xtCq5BTc8YH_Z36VKnw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n      \"title\": \"GAME NIGHTs\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-api.herokuapp.com/movies/600",
+							"protocol": "https",
+							"host": [
+								"casting-agency-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"600"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://casting-agency-api.herokuapp.com/",
+					"protocol": "https",
+					"host": [
+						"casting-agency-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

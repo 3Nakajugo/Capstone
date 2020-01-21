@@ -16,6 +16,16 @@ db.init_app(app)
 # Controllers.
 # ----------------------------------------------------------------------------#
 
+@app.route('/')
+def welcome():
+    """
+        Welcome
+    """
+
+    return jsonify({
+        'success': True,
+        'message':"welcome to capstone"
+    }), 200
 
 #  Movies
 #  ----------------------------------------------------------------
