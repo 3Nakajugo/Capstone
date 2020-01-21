@@ -34,6 +34,25 @@ Overall:
 * Models are located in `models.py`.
 * Controllers are located in `app.py`.
 
+## Roles
+
+Casting Assistant
+- view:actors
+- view:movies
+
+Casting Director
+- All permissions a Casting Assistant has
+- create:actor
+- delete:actor
+- update:actor
+- update:movie
+
+Executive Producer
+- All permissions a Casting Director has
+- add:movie
+- delete:movie
+
+
 
 ### Development Setup
 
