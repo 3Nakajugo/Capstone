@@ -90,8 +90,8 @@ To start and run the local development server,
 
 |Endpoint | Description | Permission | Body   | Response|
 | ------  | ------      |------      |------  |------   |
-|GET /actors| Fetches actors | None | None | list of drinks |
-|GET /movies| Fetches drinks |get:drinks-detial | None | list of drinks |
+|GET /actors| Fetches actors | get:actors | None | list of actors |
+|GET /movies| Fetches drinks |get:movies | None | list of movies |
 |POST /actors| Creates new actor |post:actors | `{"name": "Maria","age": 25,"gender": "female"}` |actor |
 |POST /movies| Creates new movie |post:movies | `{"category": "comedy","description": "an old","title":"GAME NIGHT"}` | movie |
 |PATCH /actors/<int:id>| Updates an actor |patch:actors | `{"name": "Maria","age": 25,"gender": "female"}` | actor |
